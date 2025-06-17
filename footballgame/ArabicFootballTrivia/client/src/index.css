@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&family=Roboto:wght@400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(192, 30%, 19%);
+  --muted: hsl(60, 4.8%, 95.9%);
+  --muted-foreground: hsl(25, 5.3%, 44.7%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(192, 30%, 19%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(192, 30%, 19%);
+  --border: hsl(20, 5.9%, 90%);
+  --input: hsl(20, 5.9%, 90%);
+  --primary: hsl(120, 61%, 34%);
+  --primary-foreground: hsl(60, 9.1%, 97.8%);
+  --secondary: hsl(51, 100%, 50%);
+  --secondary-foreground: hsl(192, 30%, 19%);
+  --accent: hsl(60, 4.8%, 95.9%);
+  --accent-foreground: hsl(24, 9.8%, 10%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(60, 9.1%, 97.8%);
+  --ring: hsl(192, 30%, 19%);
+  --radius: 0.5rem;
+  
+  /* Custom football colors */
+  --football-green: hsl(120, 61%, 34%);
+  --trophy-gold: hsl(51, 100%, 50%);
+  --timer-orange: hsl(16, 100%, 50%);
+  --success-green: hsl(120, 61%, 50%);
+  --dark-slate: hsl(180, 25%, 25%);
+}
+
+.dark {
+  --background: hsl(240, 10%, 3.9%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(240, 3.7%, 15.9%);
+  --muted-foreground: hsl(240, 5%, 64.9%);
+  --popover: hsl(240, 10%, 3.9%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(240, 10%, 3.9%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 3.7%, 15.9%);
+  --input: hsl(240, 3.7%, 15.9%);
+  --primary: hsl(120, 61%, 34%);
+  --primary-foreground: hsl(60, 9.1%, 97.8%);
+  --secondary: hsl(240, 3.7%, 15.9%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(240, 3.7%, 15.9%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(240, 4.9%, 83.9%);
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    font-family: 'Tajawal', 'Roboto', sans-serif;
+    direction: rtl;
+  }
+
+  html {
+    direction: rtl;
+  }
+
+  [dir="rtl"] .font-arabic {
+    font-family: 'Tajawal', 'Roboto', sans-serif;
+  }
+}
+
+@layer components {
+  .football-green {
+    color: var(--football-green);
+  }
+  
+  .bg-football-green {
+    background-color: var(--football-green);
+  }
+  
+  .trophy-gold {
+    color: var(--trophy-gold);
+  }
+  
+  .bg-trophy-gold {
+    background-color: var(--trophy-gold);
+  }
+  
+  .timer-orange {
+    color: var(--timer-orange);
+  }
+  
+  .bg-timer-orange {
+    background-color: var(--timer-orange);
+  }
+  
+  .success-green {
+    color: var(--success-green);
+  }
+  
+  .bg-success-green {
+    background-color: var(--success-green);
+  }
+  
+  .dark-slate {
+    color: var(--dark-slate);
+  }
+  
+  .text-dark-slate {
+    color: var(--dark-slate);
+  }
+}
+
+@layer utilities {
+  .animate-pulse-slow {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  
+  .animate-bounce-gentle {
+    animation: bounce 1s ease-in-out infinite;
+  }
+  
+  .animate-timer-pulse {
+    animation: pulse 0.5s ease-in-out infinite;
+  }
+  
+  .rtl {
+    direction: rtl;
+  }
+  
+  .ltr {
+    direction: ltr;
+  }
+}
